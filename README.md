@@ -13,12 +13,13 @@ Then in package.json, add the following lines to scripts:
 
 ```diff
    "scripts": {
-     "start": "react-scripts start",
-     "build": "react-scripts build",
-     "test": "react-scripts test",
-     "eject": "react-scripts eject",
-+	 "build:sonar": "npm run build && npm run sonar",
-+	 "sonar": "cross-var sonar-scanner -Dsonar.projectVersion=$npm_package_version"
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
++		"build:sonar": "npm run build && npm run sonar",
++		"sonar": "cross-var sonar-scanner -Dsonar.projectVersion=$npm_package_version"
+	}
 ```
 
 And create sonar-project.properties, add the following lines to properties:
